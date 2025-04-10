@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="index.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todolist">
+        <h1>TO DO LIST</h1>
+        <div class="content">
+          <input type="text" name="" id="input" placeholder="New Task..." />
+        </div>
+        <div class="butonlar">
+          <button onclick="filtrele('completed')">Tamamlanmış Görevler</button>
+          <button onclick="filtrele('pending')">Tamamlanmamış Görevler</button>
+          <button onclick="filtrele()">Tüm Görevler</button>
+        </div>
+        <div class="listediv"><ul id="liste"></ul></div>
+      </div>
+    </div>
+  </body>
+</html>
