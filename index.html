@@ -26,9 +26,10 @@
           <input type="text" name="" id="input" placeholder="New Task..." />
         </div>
         <div class="butonlar">
-          <button onclick="filtrele('completed')">Tamamlanmış Görevler</button>
-          <button onclick="filtrele('pending')">Tamamlanmamış Görevler</button>
-          <button onclick="filtrele()">Tüm Görevler</button>
+          <button onclick="filtrele('completed', event)">Tamamlanmış Görevler</button>
+          <button onclick="filtrele('pending', event)">Tamamlanmamış Görevler</button>
+          <button onclick="filtrele('',event)">Tüm Görevler</button>
+          <button class="kompleSil">Temizle</button>
         </div>
         <div class="listediv"><ul id="liste"></ul></div>
       </div>

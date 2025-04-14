@@ -15,12 +15,15 @@ body {
 .container {
   display: flex;
   justify-content: center;
+  max-height: 100vh;
+  overflow-y: auto;
+
 }
 .todolist {
   display: flex;
   flex-direction: column;
   min-width: 500px;
-  height: 700px;
+  
 }
 h1 {
   text-align: center;
@@ -66,7 +69,9 @@ input {
 .listediv ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;  
 }
+
 li {
   border: 1px black solid;
   padding: 20px;
@@ -77,6 +82,13 @@ li {
   justify-content: space-between;
   cursor: pointer;
   background-color: transparent;
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+li.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
 }
 li:hover {
   background-color: hsla(0, 0%, 100%, 0.3);
@@ -86,14 +98,17 @@ li.completed {
   color: white;
   text-decoration: line-through;
 }
-.gorev {
-  flex: 1;
-}
+
 .sil {
-  float: right;
+  
   padding-inline-end: 0px;
   cursor: pointer;
 }
 .sil:hover {
   color: #464545;
+}
+.butonlar button.active {
+  background-color: #4caf50; /* istediğin renk */
+  color: white;
+  border: none;
 }
